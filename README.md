@@ -1,2 +1,18 @@
 # gmailbox-cleaner
-Programmatically archive emails on a schedule based on tags
+Use Google Apps Script to programmatically archive emails on a schedule based on tags.
+
+Create labels in Gmail for **"Daily"**, **"Weekly"**, **"Monthly"**, and **"Expired"**. These labels correspond to different time-based search operators:
+  - "Daily" = `1d`
+  - "Weekly" = `7d`
+  - "Monthly" = `1m`
+
+Create a project at [https://script.google.com/](https://script.google.com) using the contents of `code.gs`
+
+Under Edit > Current project's triggers, set the script to run on a recurring basis  
+(e.g. "Time-driven", "Minutes timer", and "Every 15 minutes")
+
+Configure filters in Gmail to assign a Daily, Weekly, or Monthly label to an incoming email
+
+Kick back while your inbox is automatically cleaned of old emails! Emails that were automatically removed from your inbox will be assigned an "Expired" tag to easily identify later.
+
+**Tip:** Star an email thread to keep it from being automatically archived.
